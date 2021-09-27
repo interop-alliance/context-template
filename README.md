@@ -1,7 +1,6 @@
 # Context Template Repository _(context-template)_
 
-[![Build status](https://img.shields.io/github/workflow/status/digitalbazaar/context-template/Node.js%20CI)](https://github.com/digitalbazaar/context-template/actions?query=workflow%3A%22Node.js+CI%22)
-[![Coverage status](https://img.shields.io/codecov/c/github/digitalbazaar/context-template)](https://codecov.io/gh/digitalbazaar/context-template)
+[![Build status](https://img.shields.io/github/workflow/status/interop-alliance/context-template/Node.js%20CI)](https://github.com/interop-alliance/context-template/actions?query=workflow%3A%22Node.js+CI%22)
 [![NPM Version](https://img.shields.io/npm/v/context-template.svg)](https://npm.im/context-template)
 
 > A GitHub template repository for JSON-LD contexts.
@@ -39,7 +38,7 @@ import exampleCtx from 'context-template';
 const exampleCtx = require('context-template');
 const {contexts, constants, appContextMap} = exampleCtx;
 
-exampleCtx.CONTEXT_URL
+exampleCtx.CONTEXT_URL_V1
 // 'https://w3id.org/example/v1'
 
 // Codec term map value for CBOR-LD
@@ -47,20 +46,18 @@ exampleCtx.constants.CBORLD_CODEC_VALUE
 // 0x0..
 
 // get context data for a specific context
-exampleCtx.CONTEXT
+exampleCtx.CONTEXT_V1
 // full context object
 ```
 
-This package can be used with bundlers, such as [webpack][], in browser
+This package can be used with bundlers, such as [webpack](https://webpack.js.org/), in browser
 applications.
 
 ## API
 
 The library exports the following properties:
-- `CONTEXT_URL` and `CONTEXT` (it's recommended that context repositories only export one context).
-- `constants`: A Object that maps constants to well-known context URLs. The
-  main constant `CONTEXT_URL` may be updated from time to time to the
-  latest context location.
+- `CONTEXT_URL_V1` and `CONTEXT_V1` (it's recommended that context repositories only export one context).
+- `constants`: A Object that maps constants to well-known context URLs. 
 - `contexts`: A `Map` that maps URLs to full context data.
 - `appContextMap`: For use with `cborld` library.
 
@@ -72,14 +69,6 @@ each time you run the test suite.
 DO NOT edit it directly (or your changes will be quickly overwritten).
 Instead, make all context changes to `js/context.js`.
 
-## Commercial Support
-
-Commercial support for this library is available upon request from
-Digital Bazaar: support@digitalbazaar.com
-
 ## License
 
-- BSD 3-Clause © Digital Bazaar
-- See the [LICENSE](./LICENSE) file for details.
-
-[webpack]: https://webpack.js.org/
+- [MIT](./LICENSE) license.

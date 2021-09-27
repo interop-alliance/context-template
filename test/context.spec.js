@@ -6,10 +6,10 @@ chai.should();
 const {expect} = chai;
 
 const {
-  contexts, constants, appContextMap, CONTEXT_URL, CONTEXT
+  contexts, constants, appContextMap, CONTEXT_URL_V1, CONTEXT_V1
 } = require('..');
 
-const contextUrl = constants.CONTEXT_URL;
+const contextUrl = constants.CONTEXT_URL_V1;
 
 describe('Example Context', () => {
   it('constants', async () => {
