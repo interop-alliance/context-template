@@ -16,8 +16,8 @@ describe('Example Context', () => {
     expect(appContextMap).to.exist;
     expect(constants).to.exist;
     expect(constants).to.have.property('CBORLD_VALUE');
-    expect(CONTEXT_URL).to.exist;
-    expect(CONTEXT).to.exist;
+    expect(CONTEXT_URL_V1).to.exist;
+    expect(CONTEXT_V1).to.exist;
   });
 
   it('contexts', async () => {
