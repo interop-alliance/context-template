@@ -19,7 +19,7 @@
     "contexts",
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE.md"
   ],
   "repository": {
     "type": "git",
@@ -29,9 +29,8 @@
     "url": "https://github.com/interop-alliance/context-template/issues"
   },
   "author": {
-    "name": "Digital Bazaar, Inc.",
-    "email": "support@digitalbazaar.com",
-    "url": "https://digitalbazaar.com/"
+    "name": "Interop Alliance",
+    "url": "https://interopalliance.org/"
   },
   "homepage": "https://github.com/interop-alliance/context-template#readme",
   "license": "BSD-3-Clause",
