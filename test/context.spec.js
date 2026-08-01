@@ -1,17 +1,17 @@
 /*!
  * Copyright (c) 2021 Digital Bazaar, Inc. All rights reserved.
  */
-const chai = require('chai')
+import * as chai from 'chai'
 chai.should()
 const { expect } = chai
 
-const {
+import {
   contexts,
   constants,
   appContextMap,
   CONTEXT_URL_V1,
   CONTEXT_V1
-} = require('..')
+} from '../dist/index.js'
 
 const contextUrl = constants.CONTEXT_URL_V1
 

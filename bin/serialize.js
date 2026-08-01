@@ -2,15 +2,15 @@
 /*!
  * Copyright (c) 2021 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict'
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { CONTEXT_V1, constants } from '../dist/index.js'
 
-const fs = require('fs')
-const path = require('path')
-const context = require('../js/context')
-const constants = require('../js/constants')
+const dir = path.dirname(fileURLToPath(import.meta.url))
 
 // Serialize the context as JSON-LD
 fs.writeFileSync(
-  path.join(__dirname, '..', 'contexts', constants.CONTEXT_FILENAME),
-  JSON.stringify(context, null, 2)
+  path.join(dir, '..', 'contexts', constants.CONTEXT_FILENAME),
+  JSON.stringify(CONTEXT_V1, null, 2) + '\n'
 )
