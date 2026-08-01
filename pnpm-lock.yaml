@@ -43,13 +43,13 @@ importers:
         version: 0.5.7
       karma:
         specifier: ^5.1.1
-        version: 5.2.3
+        version: 5.2.3(supports-color@6.1.0)
       karma-babel-preprocessor:
         specifier: ^8.0.1
         version: 8.0.2(@babel/core@7.29.7)
       karma-chai:
         specifier: ^0.1.0
-        version: 0.1.0(chai@4.5.0)(karma@5.2.3)
+        version: 0.1.0(chai@4.5.0)(karma@5.2.3(supports-color@6.1.0))
       karma-chrome-launcher:
         specifier: ^3.1.0
         version: 3.2.0
@@ -58,7 +58,7 @@ importers:
         version: 2.0.1
       karma-mocha-reporter:
         specifier: ^2.2.5
-        version: 2.2.5(karma@5.2.3)
+        version: 2.2.5(karma@5.2.3(supports-color@6.1.0))
       karma-sourcemap-loader:
         specifier: ^0.3.7
         version: 0.3.8
@@ -68,6 +68,9 @@ importers:
       mocha:
         specifier: ^8.1.3
         version: 8.4.0
+      prettier:
+        specifier: ^3.9.6
+        version: 3.9.6
       rimraf:
         specifier: ^6.1.3
         version: 6.1.3
@@ -2423,6 +2426,11 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
+  prettier@3.9.6:
+    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
@@ -4242,7 +4250,7 @@ snapshots:
 
   bn.js@5.2.5: {}
 
-  body-parser@1.20.6:
+  body-parser@1.20.6(supports-color@6.1.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
@@ -4561,10 +4569,10 @@ snapshots:
       readable-stream: 2.3.8
       typedarray: 0.0.6
 
-  connect@3.7.0:
+  connect@3.7.0(supports-color@6.1.0):
     dependencies:
       debug: 2.6.9(supports-color@6.1.0)
-      finalhandler: 1.1.2
+      finalhandler: 1.1.2(supports-color@6.1.0)
       parseurl: 1.3.3
       utils-merge: 1.0.1
     transitivePeerDependencies:
@@ -5037,7 +5045,7 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@1.1.2:
+  finalhandler@1.1.2(supports-color@6.1.0):
     dependencies:
       debug: 2.6.9(supports-color@6.1.0)
       encodeurl: 1.0.2
@@ -5509,19 +5517,19 @@ snapshots:
     dependencies:
       '@babel/core': 7.29.7
 
-  karma-chai@0.1.0(chai@4.5.0)(karma@5.2.3):
+  karma-chai@0.1.0(chai@4.5.0)(karma@5.2.3(supports-color@6.1.0)):
     dependencies:
       chai: 4.5.0
-      karma: 5.2.3
+      karma: 5.2.3(supports-color@6.1.0)
 
   karma-chrome-launcher@3.2.0:
     dependencies:
       which: 1.3.1
 
-  karma-mocha-reporter@2.2.5(karma@5.2.3):
+  karma-mocha-reporter@2.2.5(karma@5.2.3(supports-color@6.1.0)):
     dependencies:
       chalk: 2.4.2
-      karma: 5.2.3
+      karma: 5.2.3(supports-color@6.1.0)
       log-symbols: 2.2.0
       strip-ansi: 4.0.0
 
@@ -5543,13 +5551,13 @@ snapshots:
       webpack: 4.47.0(webpack-cli@3.3.12)
       webpack-dev-middleware: 3.7.3(webpack@4.47.0)
 
-  karma@5.2.3:
+  karma@5.2.3(supports-color@6.1.0):
     dependencies:
-      body-parser: 1.20.6
+      body-parser: 1.20.6(supports-color@6.1.0)
       braces: 3.0.3
       chokidar: 3.6.0
       colors: 1.4.0
-      connect: 3.7.0
+      connect: 3.7.0(supports-color@6.1.0)
       di: 0.0.1
       dom-serialize: 2.2.1
       glob: 7.2.3
@@ -6031,6 +6039,8 @@ snapshots:
   possible-typed-array-names@1.1.0: {}
 
   prelude-ls@1.2.1: {}
+
+  prettier@3.9.6: {}
 
   process-nextick-args@2.0.1: {}
 
