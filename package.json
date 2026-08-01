@@ -14,6 +14,7 @@
   "module": "dist/index.js",
   "browser": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "files": [
     "contexts",
     "dist",
@@ -64,6 +65,10 @@
     "test:browser": "playwright test",
     "test:node": "vitest run",
     "test:coverage": "vitest run --coverage"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   },
   "packageManager": "pnpm@11.13.0",
   "engines": {
