@@ -83,4 +83,4 @@ make all context changes to `src/context.ts`.
 
 ## License
 
-- [BSD-3-Clause](./LICENSE) license.
+- [BSD-3-Clause](./LICENSE.md) license.
