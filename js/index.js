@@ -1,14 +1,14 @@
-'use strict';
+'use strict'
 
-const context = require('./context');
-const constants = require('./constants');
-const {CONTEXT_URL_V1, CBORLD_VALUE} = constants;
+const context = require('./context')
+const constants = require('./constants')
+const { CONTEXT_URL_V1, CBORLD_VALUE } = constants
 
-const contexts = new Map();
-contexts.set(CONTEXT_URL_V1, context);
+const contexts = new Map()
+contexts.set(CONTEXT_URL_V1, context)
 
-const appContextMap = new Map();
-appContextMap.set(CONTEXT_URL_V1, CBORLD_VALUE);
+const appContextMap = new Map()
+appContextMap.set(CONTEXT_URL_V1, CBORLD_VALUE)
 
 module.exports = {
   constants,
@@ -16,4 +16,4 @@ module.exports = {
   appContextMap,
   CONTEXT_URL_V1,
   CONTEXT_V1: context
-};
+}
