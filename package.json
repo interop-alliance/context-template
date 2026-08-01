@@ -2,7 +2,8 @@
   "name": "context-template",
   "version": "0.0.1",
   "description": "Context template repository.",
-  "main": "js/index.js",
+  "type": "module",
+  "main": "dist/index.js",
   "module": "./dist/context.esm.js",
   "files": [
     "contexts",
@@ -50,14 +51,16 @@
     "rimraf": "^6.1.3",
     "rollup": "^2.26.10",
     "rollup-plugin-commonjs": "^10.1.0",
+    "typescript": "^7.0.2",
     "typescript-eslint": "^8.65.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build": "pnpm run clear && pnpm run serialize && webpack && rollup -c",
+    "build": "pnpm run clear && tsc && pnpm run serialize",
     "clear": "rimraf dist/* contexts/*.jsonld",
     "lint": "eslint src test",
+    "typecheck": "tsc -p tsconfig.dev.json",
     "prepare": "pnpm run build",
     "serialize": "node bin/serialize.js",
     "test": "pnpm run lint && pnpm run build && pnpm run test:node && pnpm run test:karma",
