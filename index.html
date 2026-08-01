@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    Vocabulary page template. When creating a new context repo from this
+    template:
+    1. Replace "Example" / "example" with your vocabulary name and
+       w3id.org namespace (matching src/constants.ts).
+    2. Add a <dt id="..."> entry per vocabulary term. The id MUST match
+       the term token exactly (fragment matching is literal and
+       case-sensitive), so that IRIs like
+       https://w3id.org/example#ExampleTerm land on their definitions
+       after the w3id.org redirect.
+    3. Serve this page at the site root (e.g. GitHub Pages from the
+       branch root) and point the w3id.org bare-namespace redirect at it.
+  -->
+  <title>Example Vocabulary</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 46rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.5;
+    }
+    code { background: #f4f4f4; padding: 0.1em 0.3em; border-radius: 3px; }
+    dt { font-weight: bold; margin-top: 1rem; }
+    dt:target { background: #fff3b8; }
+    .draft {
+      border: 1px solid #c9a400;
+      background: #fff9df;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+    }
+    .reserved { color: #666; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1a1a1a; color: #ddd; }
+      code { background: #2c2c2c; }
+      dt:target { background: #4a4000; }
+      .draft { background: #332f00; border-color: #665c00; }
+      .reserved { color: #999; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Example Vocabulary</h1>
+  <p class="draft"><strong>Draft.</strong> This vocabulary is a work in
+    progress. Term definitions here are stubs pending the corresponding
+    specification.</p>
+  <p>Namespace: <code>https://w3id.org/example#</code></p>
+  <p>This page defines the terms used by the Example vocabulary.
+    JSON-LD contexts:</p>
+  <ul>
+    <li><code>https://w3id.org/example/v1</code></li>
+  </ul>
+
+  <h2>Terms</h2>
+  <dl>
+    <dt id="ExampleTerm"><code>ExampleTerm</code></dt>
+    <dd>A placeholder term definition. Replace with your vocabulary's
+      terms, one dt/dd pair each.</dd>
+    <dt id="reserved-term" class="reserved"><code>reserved-term</code>
+      (reserved)</dt>
+    <dd class="reserved">Use this pattern for names reserved for future
+      use: the name is registered, its behavior is not yet specified.</dd>
+  </dl>
+
+  <h2>Resources</h2>
+  <ul>
+    <li><a href="https://github.com/interop-alliance/context-template">Repository</a></li>
+  </ul>
+</body>
+</html>
